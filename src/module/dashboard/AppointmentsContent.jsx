@@ -3,17 +3,17 @@ import { CalendarIcon, CheckCircle, XCircle } from 'lucide-react';
 
 const AppointmentsContent = () => {
   const [appointments, setAppointments] = useState([
-    { id: 1, name: 'Jairus Pecho', gender: 'Male', age: 20, treatment: 'Engine Repair', time: '10:00am - 11:00am', status: 'Pending', date: '2025-03-15' },
-    { id: 2, name: 'Kayheleen Minor', gender: 'Female', age: 20, treatment: 'Brake System', time: '11:00am - 12:00pm', status: 'Pending', date: '2025-03-16' },
-    { id: 3, name: 'Jackie Gallora', gender: 'Female', age: 20, treatment: 'Maintenance', time: '1:00pm - 2:00pm', status: 'Pending', date: '2025-03-17' },
-    { id: 4, name: 'Kevin Bolado', gender: 'Male', age: 20, treatment: 'Oil Change', time: '2:00pm - 3:00pm', status: 'Pending', date: '2025-03-18' },
+    { id: 1, name: 'Jairus Pecho', gender: 'Male', age: 20, motorType: 'Honda Wave 110', treatment: 'Engine Repair', time: '10:00am - 11:00am', status: 'Pending', date: '2025-03-15' },
+    { id: 2, name: 'Kayheleen Minor', gender: 'Female', age: 20, motorType: 'Yamaha Mio', treatment: 'Brake System', time: '11:00am - 12:00pm', status: 'Pending', date: '2025-03-16' },
+    { id: 3, name: 'Jackie Gallora', gender: 'Female', age: 20, motorType: 'Suzuki Raider', treatment: 'Maintenance', time: '1:00pm - 2:00pm', status: 'Pending', date: '2025-03-17' },
+    { id: 4, name: 'Kevin Bolado', gender: 'Male', age: 20, motorType: 'Kawasaki Rouser', treatment: 'Oil Change', time: '2:00pm - 3:00pm', status: 'Pending', date: '2025-03-18' },
   ]);
 
   const serviceAppointments = [
-    { id: 5, name: 'LeBron James', gender: 'Male', age: 40, treatment: 'Engine Repair', time: '10:00am - 11:00am', status: 'In Progress', date: '2025-03-15' },
-    { id: 6, name: 'Stephen Curry', gender: 'Male', age: 35, treatment: 'Brake System Overhaul', time: '11:00am - 12:00pm', status: 'In Progress', date: '2025-03-16' },
-    { id: 7, name: 'Kevin Durant', gender: 'Male', age: 35, treatment: 'Transmission Fix', time: '1:00pm - 2:00pm', status: 'In Progress', date: '2025-03-17' },
-    { id: 8, name: 'Giannis Antetokounmpo', gender: 'Male', age: 28, treatment: 'Oil Change', time: '2:00pm - 3:00pm', status: 'In Progress', date: '2025-03-18' },
+    { id: 5, name: 'LeBron James', gender: 'Male', age: 40, motorType: 'Honda XRM', treatment: 'Engine Repair', time: '10:00am - 11:00am', status: 'In Progress', date: '2025-03-15' },
+    { id: 6, name: 'Stephen Curry', gender: 'Male', age: 35, motorType: 'Yamaha NMAX', treatment: 'Brake System Overhaul', time: '11:00am - 12:00pm', status: 'In Progress', date: '2025-03-16' },
+    { id: 7, name: 'Kevin Durant', gender: 'Male', age: 35, motorType: 'Suzuki Smash', treatment: 'Transmission Fix', time: '1:00pm - 2:00pm', status: 'In Progress', date: '2025-03-17' },
+    { id: 8, name: 'Giannis Antetokounmpo', gender: 'Male', age: 28, motorType: 'Kawasaki Barako', treatment: 'Oil Change', time: '2:00pm - 3:00pm', status: 'In Progress', date: '2025-03-18' },
   ];
 
   const handleAction = (id, action) => {
@@ -59,6 +59,7 @@ const AppointmentsContent = () => {
               <div key={appointment.id} className="border-b py-3">
                 <p className="font-bold">{appointment.treatment}</p>
                 <p className="text-sm text-gray-500">Customer: {appointment.name}</p>
+                <p className="text-sm text-gray-500">Motor Type: {appointment.motorType}</p>
                 <p className="text-sm text-gray-700">{appointment.time}</p>
                 <p className="text-sm text-gray-500">Requested on: {appointment.date}</p>
                 <a href="#" className="text-blue-500 text-sm font-semibold">View Details</a>
@@ -97,6 +98,7 @@ const AppointmentsContent = () => {
                 <div>
                   <p className="font-bold">{appointment.name}</p>
                   <p className="text-sm text-gray-500">{appointment.gender}, {appointment.age}</p>
+                  <p className="text-sm text-gray-500">Motor Type: {appointment.motorType}</p>
                   <p className="text-sm text-gray-700">Service: {appointment.treatment}</p>
                   <p className="text-sm text-gray-700">{appointment.time}</p>
                   <p className="text-sm text-gray-500">Scheduled on: {appointment.date}</p>

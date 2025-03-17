@@ -41,6 +41,12 @@ const Front = () => {
             <span className="ml-2 text-sm">19 votes</span>
           </div>
           <p className="mt-4">The best to start and renew</p>
+          <button
+            onClick={() => navigate('/book')} // Navigate to BookingPage
+            className="bg-red-400 text-white font-semibold my-4 py-3 px-6 rounded-full shadow-xl hover:bg-red-500 hover:scale-105 transform transition duration-300 ease-in-out"
+          >
+            Book Now
+          </button>
         </div>
       </section>
     </div>

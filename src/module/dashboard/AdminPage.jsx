@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Home, Package, Calendar, BarChart2, Settings, Menu, X } from 'lucide-react';
+import { Home, Package, Calendar, Monitor, Settings, Menu, X } from 'lucide-react';
 import DashboardContent from './DashboardContent';
 import InventoryContent from './InventoryContent';
 import AppointmentsContent from './AppointmentsContent';
-import ReportsContent from './ReportsContent';
+import MotorShopPOS from './MotorShopPOS';
 import SettingsContent from './SettingsContent';
 import { useNavigate } from 'react-router-dom';
 
@@ -13,7 +13,7 @@ const Sidebar = ({ onSelectPage, activePage, isOpen, toggleSidebar }) => {
     { icon: <Home />, label: 'Dashboard' },
     { icon: <Package />, label: 'Inventory' },
     { icon: <Calendar />, label: 'Appointments' },
-    { icon: <BarChart2 />, label: 'Reports' },
+    { icon: <Monitor />, label: 'POS' },
     { icon: <Settings />, label: 'Settings' },
   ];
 
@@ -57,8 +57,8 @@ const Content = ({ page }) => {
       return <InventoryContent />;
     case 'Appointments':
       return <AppointmentsContent />;
-    case 'Reports':
-      return <ReportsContent />;
+    case 'POS':
+      return <MotorShopPOS />;
     case 'Settings':
       return <SettingsContent />;
     default:
